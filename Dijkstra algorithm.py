@@ -9,6 +9,7 @@ e = np.random.randint(1,30,(n ,n))
 for i in range(n):
     e[i][i] = 0
 
+# 矩陣有可能出現點沒邊    
 resultantList = []
 for i in range(0, n):
     for j in range(0, n):
