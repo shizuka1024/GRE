@@ -10,7 +10,7 @@ e = np.random.randint(1,30,(n ,n))
 for i in range(n):
     e[i][i] = 0
 
-# 矩陣有可能出現點沒邊之問題    
+# 矩陣
 resultantList = []
 for i in range(0, n):
     for j in range(0, n):
@@ -19,8 +19,13 @@ for i in range(0, n):
                 resultantList.append(e[i][j])
             else:
                 e[i][j] = inf
-
-print(e)
+# 矩陣
+for i in range(0, n):
+    for j in range(0, n):
+        if i != j : 
+            if e[i][j] != inf and e[j][i] != inf:
+                e[j][i] = inf
+                print(j,i)
 
 dis = np.zeros(n, dtype=int)
 for i in range(0, n):
@@ -41,6 +46,5 @@ for i in range(0, n):
         if e[u][v] < inf:
             if dis[v] > dis[u] + e[u][v]:
                 dis[v] = dis[u] + e[u][v]
-
-for i in range(0, n):
-    print(dis[i])
+                
+print("\n",dis)
