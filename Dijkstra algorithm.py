@@ -1,5 +1,6 @@
 import numpy as np
 
+# inf值不能太小，不然會出現邊相加超過之問題
 inf = 1000
 key_point = 0
 n = 6
@@ -9,7 +10,7 @@ e = np.random.randint(1,30,(n ,n))
 for i in range(n):
     e[i][i] = 0
 
-# 矩陣有可能出現點沒邊    
+# 矩陣有可能出現點沒邊之問題    
 resultantList = []
 for i in range(0, n):
     for j in range(0, n):
