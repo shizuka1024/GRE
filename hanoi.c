@@ -13,7 +13,7 @@ void hanoi(int n, char A, char B, char C) {
 
 int main() {
     int n;
-    printf("½Ð¿é¤J½L¼Æ¡G");
+    printf("è«‹è¼¸å…¥ç¢Ÿæ•¸");
     scanf("%d", &n);
     hanoi(n, 'A', 'B', 'C');
     return 0;
