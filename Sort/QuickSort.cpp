@@ -16,8 +16,7 @@ int partition(int a[],int left,int right){
             swap(a,ptr,i);
         }
     }
-    a[left] = a[ptr];
-    a[ptr] = pivot;
+    swap(a , left, ptr);
     return ptr;
 }
 
