@@ -1,6 +1,5 @@
 #include <stdio.h>
-//no negative exponent value
-int calculate_exponent(int b,int e){
+double calculate_exponent(int b,int e){
     if(e==0){
         return 1;
     }
@@ -9,9 +8,14 @@ int calculate_exponent(int b,int e){
 
 int main()
 {
-    int b = 7;
-    int e = 3;
-    printf("%d",calculate_exponent(b,e));
-
+    int b = 2;
+    int e = -2;
+    if(e<0){
+        e=e*(-1);
+        printf("%.2f",1/calculate_exponent(b,e));
+    }else{
+        printf("%.2f",calculate_exponent(b,e));
+    }
+    
     return 0;
 }
