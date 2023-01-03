@@ -2,7 +2,8 @@
 #include <math.h>
 #include <stdbool.h>
 
-//give circle's center point(cx, cy), redius r, square's upper-left point (sx, sy), and edge lenthg e
+//give circle's center point(cx, cy), redius r, square's upper-left point (sx, sy), and edge lenthg e.
+//the power function is the only function allowed to be used without defining it.
 
 bool collidetec(float cx, float cy, float r, float sx, float sy, float e){
     float testX = cx;
